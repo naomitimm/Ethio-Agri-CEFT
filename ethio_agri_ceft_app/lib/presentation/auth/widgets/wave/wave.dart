@@ -22,9 +22,12 @@ class LandingPageWave extends StatelessWidget {
           //     child:
           //         const Image(image: AssetImage("assets/icons/coffee2.png"))
           //         ),
-          const Align(
-              alignment: Alignment.center,
-              child: AppHeadline(color: Colors.white)),
+          Padding(
+            padding: EdgeInsets.only(top: size.height / 3.5),
+            child: const Align(
+                alignment: Alignment.center,
+                child: SizedBox(child: AppHeadline(color: Colors.white))),
+          ),
         ],
       ),
     );

@@ -19,7 +19,7 @@ class ButtonWithArrow extends StatelessWidget {
         height: 40,
         width: 190,
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(22, 84, 65, 1),
+            color: Color.fromRGBO(178, 143, 61, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

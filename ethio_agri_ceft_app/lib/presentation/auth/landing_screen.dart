@@ -15,9 +15,11 @@ class LandingScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const AppHeadline(color: Colors.black),
+                const AppHeadline(
+                  color: Color.fromRGBO(178, 143, 61, 1),
+                ),
                 const IntroText(
-                    color: Colors.black,
+                    color: Color.fromRGBO(178, 143, 61, 1),
                     text: "Lorem ipsum hhhhhhhhhhhhhhhhhhhh"),
                 const SizedBox(
                   height: 20,
@@ -33,7 +35,7 @@ class LandingScreen extends StatelessWidget {
                   height: 10,
                 ),
                 LinkText(
-                  color: const Color.fromRGBO(22, 84, 65, 1),
+                  color: const Color.fromRGBO(178, 143, 61, 1),
                   text: "Login",
                   navigator: () {
                     navCubit.toLoginScreen();

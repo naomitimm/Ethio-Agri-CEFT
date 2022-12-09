@@ -31,7 +31,7 @@ class SignupScreen extends StatelessWidget {
           const Align(
               alignment: Alignment.topCenter,
               child: AppHeadline(
-                color: Colors.black,
+                color: Color.fromRGBO(178, 143, 61, 1),
               )),
           const SizedBox(
             height: 20,
