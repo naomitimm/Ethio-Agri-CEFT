@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 class Product extends Equatable {
   final String productName;
   final String imageUrl;
-  final int? price;
+  final double? price;
   const Product(
       {required this.productName, required this.imageUrl, required this.price});
 
@@ -32,6 +32,44 @@ class Product extends Equatable {
       productName: 'Crops',
       imageUrl: 'assets/icons/food_crops.png',
       price: null,
+    )
+  ];
+
+  static List<Product> products = [
+    const Product(
+      productName: 'Tea',
+      imageUrl: 'assets/icons/images.jpeg',
+      price: 204,
+    ),
+    const Product(
+      productName: 'Flowers',
+      imageUrl: 'assets/icons/images.jpeg',
+      price: 204,
+    ),
+    const Product(
+      productName: 'Honey',
+      imageUrl: 'assets/icons/images.jpeg',
+      price: 204,
+    ),
+    const Product(
+      productName: 'Coffee',
+      imageUrl: 'assets/icons/images.jpeg',
+      price: 204,
+    ),
+    const Product(
+      productName: 'Crops',
+      imageUrl: 'assets/icons/images.jpeg',
+      price: 204,
+    ),
+    const Product(
+      productName: 'Crops',
+      imageUrl: 'assets/icons/images.jpeg',
+      price: 204,
+    ),
+    const Product(
+      productName: 'Crops',
+      imageUrl: 'assets/icons/images.jpeg',
+      price: 204,
     )
   ];
 
