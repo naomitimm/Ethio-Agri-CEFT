@@ -15,6 +15,9 @@ export 'package:ethio_agri_ceft_app/presentation/auth/landing_screen.dart';
 export 'package:ethio_agri_ceft_app/presentation/auth/login_screen.dart';
 export 'package:ethio_agri_ceft_app/presentation/auth/signup_screen.dart';
 export 'package:ethio_agri_ceft_app/presentation/dashboard/dashboard_screen.dart';
+export 'package:ethio_agri_ceft_app/presentation/dashboard/home_screen.dart';
+export 'package:ethio_agri_ceft_app/presentation/dashboard/profile_screen.dart';
+export 'package:ethio_agri_ceft_app/presentation/dashboard/wishlist_screen.dart';
 
 // widgets
 export 'package:ethio_agri_ceft_app/presentation/auth/widgets/text/text.dart';
