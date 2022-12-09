@@ -14,6 +14,15 @@ class UnnamedApp extends StatelessWidget {
         BlocProvider(
           create: (context) => NavigationCubit(),
         ),
+        BlocProvider(
+          create: (context) => SignupBloc(),
+        ),
+        BlocProvider(
+          create: (context) => LoginBloc(),
+        ),
+        BlocProvider(
+          create: (context) => LogoutBloc(),
+        ),
       ],
       child: const UnnamedPages(),
     );
@@ -32,9 +41,8 @@ class UnnamedPages extends StatelessWidget {
             pages: [
               const MaterialPage(child: LandingScreen()),
               // const MaterialPage(child: DashboardScreen()),
-              if (state is SignupRoute)
-                const MaterialPage(child: SignupScreen()),
-              if (state is LoginRoute) const MaterialPage(child: LoginScreen()),
+              if (state is SignupRoute) MaterialPage(child: SignupScreen()),
+              if (state is LoginRoute) MaterialPage(child: LoginScreen()),
               if (state is LandingRoute)
                 const MaterialPage(child: LandingScreen()),
               if (state is DashboardRoute)
