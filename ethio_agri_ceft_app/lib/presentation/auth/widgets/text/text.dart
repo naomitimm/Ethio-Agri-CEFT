@@ -17,7 +17,7 @@ class AppHeadline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Un named",
+    return Text("Blank",
         style: GoogleFonts.rancho(
           textStyle: TextStyle(
               color: color, fontSize: 50, fontWeight: FontWeight.w800),

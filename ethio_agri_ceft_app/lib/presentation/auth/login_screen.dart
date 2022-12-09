@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
         const Align(
             alignment: Alignment.topCenter,
             child: AppHeadline(
-              color: Color.fromRGBO(22, 84, 65, 1),
+              color: Color.fromRGBO(178, 143, 61, 1),
             )),
         const SizedBox(
           height: 20,
