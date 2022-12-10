@@ -15,7 +15,10 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: ListView(
           children: [
-            const AppHeadline(color: Colors.black),
+            const PageHeadline(
+              color: Colors.black,
+              text: 'Home',
+            ),
             const MySearchBar(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),

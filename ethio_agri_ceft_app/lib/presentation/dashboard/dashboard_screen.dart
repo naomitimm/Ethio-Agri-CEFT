@@ -8,13 +8,9 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  int myIndex = 0;
+  int myIndex = 2;
 
-  List myPages = [
-    const HomeScreen(),
-    const WishlistScreen(),
-    const ProfileScreen()
-  ];
+  List myPages = [const HomeScreen(), const WishlistScreen(), ProfileScreen()];
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +19,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         bottomNavigationBar: BottomNavigationBar(
           elevation: 40.0,
           showUnselectedLabels: false,
-          selectedItemColor: const Color.fromARGB(255, 0, 117, 94),
+          selectedItemColor: const Color.fromRGBO(36, 88, 64, 1),
           selectedLabelStyle: GoogleFonts.montserrat(
             textStyle: const TextStyle(fontWeight: FontWeight.w700),
           ),
@@ -37,14 +33,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
             BottomNavigationBarItem(
                 icon: FaIcon(
                   FontAwesomeIcons.house,
-                  color: Color.fromARGB(255, 0, 117, 94),
+                  color: Color.fromRGBO(36, 88, 64, 1),
                   size: 25,
                 ),
                 label: "Home"),
             BottomNavigationBarItem(
               icon: FaIcon(
                 FontAwesomeIcons.bagShopping,
-                color: Color.fromARGB(255, 0, 117, 94),
+                color: Color.fromRGBO(36, 88, 64, 1),
                 size: 25,
               ),
               label: "Wishlist",
@@ -52,7 +48,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             BottomNavigationBarItem(
                 icon: FaIcon(
                   FontAwesomeIcons.userLarge,
-                  color: Color.fromARGB(255, 0, 117, 94),
+                  color: Color.fromRGBO(36, 88, 64, 1),
                   size: 25,
                 ),
                 label: "Profile"),

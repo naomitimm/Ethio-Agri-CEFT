@@ -18,9 +18,25 @@ class AppHeadline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text("Blank",
-        style: GoogleFonts.rancho(
+        style: GoogleFonts.patuaOne(
           textStyle: TextStyle(
               color: color, fontSize: 50, fontWeight: FontWeight.w800),
+        ));
+  }
+}
+
+class PageHeadline extends StatelessWidget {
+  final Color color;
+  final String text;
+  const PageHeadline({Key? key, required this.color, required this.text})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text,
+        style: GoogleFonts.patuaOne(
+          textStyle: TextStyle(
+              color: color, fontSize: 48, fontWeight: FontWeight.w600),
         ));
   }
 }
