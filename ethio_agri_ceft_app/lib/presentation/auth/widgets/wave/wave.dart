@@ -11,7 +11,7 @@ class LandingPageWave extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            color: const Color.fromRGBO(22, 84, 65, 1),
+            color: const Color.fromRGBO(178, 143, 61, 1),
             height: size.height / 1.6,
             width: double.infinity,
           ),

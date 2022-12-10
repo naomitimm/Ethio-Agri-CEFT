@@ -8,7 +8,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  int myIndex = 2;
+  int myIndex = 0;
 
   List myPages = [const HomeScreen(), const WishlistScreen(), ProfileScreen()];
 
