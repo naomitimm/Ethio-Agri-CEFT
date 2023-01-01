@@ -1,7 +1,8 @@
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
-class CartProductCArd extends StatelessWidget {
-  const CartProductCArd({super.key});
+class CartProductCard extends StatelessWidget {
+  final void Function() dispatcher;
+  const CartProductCard({super.key, required this.dispatcher});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +16,33 @@ class CartProductCArd extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              width: size.width / 2.5,
-              height: size.height / 6,
-              decoration: const BoxDecoration(
-                  color: Colors.pink,
-                  borderRadius: BorderRadius.only(
-                      // topRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
-                      topLeft: Radius.circular(20))),
+            Stack(
+              children: [
+                Container(
+                  width: size.width / 2.5,
+                  height: size.height / 6,
+                  decoration: const BoxDecoration(
+                      color: Colors.pink,
+                      borderRadius: BorderRadius.only(
+                          // topRight: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                          topLeft: Radius.circular(20))),
+                ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: CircleAvatar(
+                    radius: 18,
+                    backgroundColor: const Color.fromARGB(255, 207, 207, 207),
+                    child: IconButton(
+                        onPressed: dispatcher,
+                        icon: const FaIcon(
+                          FontAwesomeIcons.x,
+                          size: 15,
+                          color: Colors.black,
+                        )),
+                  ),
+                )
+              ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
