@@ -19,7 +19,7 @@ class ButtonWithArrow extends StatelessWidget {
         height: 40,
         width: 190,
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(178, 143, 61, 1),
+            color: Color.fromRGBO(45, 125, 188, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -70,7 +70,7 @@ class AuthButtonWithArrow extends StatelessWidget {
         height: 40,
         width: 190,
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(151, 77, 36, 1),
+            color: Color.fromRGBO(45, 125, 188, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -110,7 +110,7 @@ class ButtonLoading extends StatelessWidget {
         height: 40,
         width: 190,
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(151, 77, 36, 1),
+            color: Color.fromRGBO(45, 125, 188, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -133,11 +133,11 @@ class ButtonLoading extends StatelessWidget {
   }
 }
 
-class AuthWideGreenButton extends StatelessWidget {
+class AuthWideBlueButton extends StatelessWidget {
   final String lable;
   final void Function() dispatcher;
   final GlobalKey<FormState> formKey;
-  const AuthWideGreenButton(
+  const AuthWideBlueButton(
       {Key? key,
       required this.lable,
       required this.dispatcher,
@@ -159,7 +159,7 @@ class AuthWideGreenButton extends StatelessWidget {
               height: 50,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
-                color: Color.fromRGBO(22, 84, 65, 1),
+                color: Color.fromRGBO(45, 125, 188, 1),
               ),
               child: Center(
                 child: Text(lable,
@@ -186,7 +186,7 @@ class AuthLoadingButton extends StatelessWidget {
             height: 50,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(15)),
-              color: Color.fromRGBO(22, 84, 65, 1),
+              color: Color.fromRGBO(45, 125, 188, 1),
             ),
             child: const Center(
               child: CircularProgressIndicator(

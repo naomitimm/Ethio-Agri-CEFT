@@ -31,7 +31,7 @@ class SignupScreen extends StatelessWidget {
           const Align(
               alignment: Alignment.topCenter,
               child: AppHeadline(
-                color: Color.fromRGBO(178, 143, 61, 1),
+                color: Color.fromRGBO(45, 125, 188, 1),
               )),
           const SizedBox(
             height: 20,
@@ -81,7 +81,7 @@ class SignupScreen extends StatelessWidget {
                   },
                   builder: (context, state) {
                     if (state is SignupInitial) {
-                      return AuthWideGreenButton(
+                      return AuthWideBlueButton(
                           lable: "Signup",
                           dispatcher: () {
                             context.read<SignupBloc>().add(SignupRequested(
@@ -97,17 +97,8 @@ class SignupScreen extends StatelessWidget {
                     return Container();
                   },
                 ),
-                const GreyText(text: "Or sign up with"),
                 const SizedBox(
                   height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    // ExtraAuthRoutes(image: "assets/home_page/google.png"),
-                    // ExtraAuthRoutes(image: "assets/home_page/facebook.png"),
-                    // ExtraAuthRoutes(image: "assets/home_page/twitter.png"),
-                  ],
                 ),
                 const SizedBox(
                   height: 10,
@@ -128,7 +119,7 @@ class SignupScreen extends StatelessWidget {
                           navigator: () {
                             navCubit.toLoginScreen();
                           },
-                          color: const Color.fromRGBO(22, 84, 65, 1),
+                          color: const Color.fromRGBO(45, 125, 188, 1),
                         )),
                   ],
                 ),

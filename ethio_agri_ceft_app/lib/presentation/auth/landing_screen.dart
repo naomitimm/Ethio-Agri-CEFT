@@ -6,6 +6,7 @@ class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final navCubit = context.read<NavigationCubit>();
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
         children: [
@@ -15,14 +16,14 @@ class LandingScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const AppHeadline(
-                  color: Color.fromRGBO(178, 143, 61, 1),
-                ),
-                const IntroText(
-                    color: Color.fromRGBO(178, 143, 61, 1),
-                    text: "Lorem ipsum hhhhhhhhhhhhhhhhhhhh"),
-                const SizedBox(
-                  height: 20,
+                // const AppHeadline(
+                //   color: Color.fromRGBO(45, 125, 188, 1),
+                // ),
+                // const IntroText(
+                //     color: Color.fromRGBO(45, 125, 188, 1),
+                //     text: "Lorem ipsum hhhhhhhhhhhhhhhhhhhh"),
+                SizedBox(
+                  height: size.height / 10,
                 ),
                 ButtonWithArrow(
                   text: "New Account",
@@ -35,7 +36,7 @@ class LandingScreen extends StatelessWidget {
                   height: 10,
                 ),
                 LinkText(
-                  color: const Color.fromRGBO(178, 143, 61, 1),
+                  color: const Color.fromRGBO(45, 125, 188, 1),
                   text: "Login",
                   navigator: () {
                     navCubit.toLoginScreen();

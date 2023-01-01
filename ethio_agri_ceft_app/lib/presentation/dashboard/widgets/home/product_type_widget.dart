@@ -1,4 +1,3 @@
-import 'package:ethio_agri_ceft_app/domain/product/product_model.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class ProductTypeCard extends StatelessWidget {
@@ -15,7 +14,7 @@ class ProductTypeCard extends StatelessWidget {
       ),
       child: Container(
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(178, 143, 61, 1),
+            color: Color.fromRGBO(158, 191, 217, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         width: 150,
         child: Padding(
@@ -58,7 +57,7 @@ class ProductCard extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Container(
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(143, 169, 159, 1),
+            color: Color.fromRGBO(158, 191, 217, 1),
             borderRadius: BorderRadius.all(Radius.circular(20))),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -68,7 +67,7 @@ class ProductCard extends StatelessWidget {
               height: 130,
               width: double.infinity,
               decoration: const BoxDecoration(
-                  color: Color.fromRGBO(36, 88, 64, 1),
+                  color: Color.fromARGB(255, 228, 228, 228),
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20),
                       topLeft: Radius.circular(20))),

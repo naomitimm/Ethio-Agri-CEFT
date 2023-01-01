@@ -1,11 +1,11 @@
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 void main() {
-  runApp(const UnnamedApp());
+  runApp(const ReviewScape());
 }
 
-class UnnamedApp extends StatelessWidget {
-  const UnnamedApp({Key? key}) : super(key: key);
+class ReviewScape extends StatelessWidget {
+  const ReviewScape({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,8 @@ class UnnamedPages extends StatelessWidget {
         return MaterialApp(
           home: Navigator(
             pages: [
-              const MaterialPage(child: LandingScreen()),
-              // const MaterialPage(child: DashboardScreen()),
+              // const MaterialPage(child: LandingScreen()),
+              const MaterialPage(child: DashboardScreen()),
               if (state is SignupRoute) MaterialPage(child: SignupScreen()),
               if (state is LoginRoute) MaterialPage(child: LoginScreen()),
               if (state is LandingRoute)

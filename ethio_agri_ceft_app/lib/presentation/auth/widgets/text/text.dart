@@ -1,11 +1,11 @@
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 List colors = const [
-  Color.fromRGBO(178, 143, 61, 1),
-  Color.fromRGBO(36, 88, 64, 1),
-  Color.fromRGBO(248, 248, 245, 1),
-  Color.fromRGBO(143, 169, 159, 1),
-  Color.fromRGBO(22, 84, 65, 1),
+  Color.fromARGB(255, 228, 228, 228),
+  Color.fromRGBO(0, 107, 186, 1),
+  Color.fromRGBO(37, 37, 37, 1),
+  Color.fromRGBO(45, 125, 188, 1),
+  Color.fromRGBO(158, 191, 217, 1),
 ];
 
 class AppHeadline extends StatelessWidget {
@@ -17,7 +17,7 @@ class AppHeadline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Blank",
+    return Text("ReviewScape",
         style: GoogleFonts.patuaOne(
           textStyle: TextStyle(
               color: color, fontSize: 50, fontWeight: FontWeight.w800),

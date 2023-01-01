@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                     children: [
                       const CircleAvatar(
                         radius: 50,
-                        backgroundColor: Color.fromRGBO(36, 88, 64, 1),
+                        backgroundColor: Color.fromRGBO(45, 125, 188, 1),
                       ),
                       const SizedBox(
                         width: 20,
@@ -100,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  WideGreenButton(
+                  WideBlueButton(
                       dispatcher: () {
                         showBottomSheet(
                             context: context,

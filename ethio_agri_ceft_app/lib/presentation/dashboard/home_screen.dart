@@ -1,7 +1,3 @@
-import 'package:ethio_agri_ceft_app/domain/product/product_model.dart';
-import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home/product_type_widget.dart';
-import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home/search_widget.dart';
-import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home/text_widgets.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class HomeScreen extends StatelessWidget {
