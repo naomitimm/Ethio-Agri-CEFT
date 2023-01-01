@@ -19,7 +19,7 @@ class ButtonWithArrow extends StatelessWidget {
         height: 40,
         width: 190,
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(45, 125, 188, 1),
+            color: Color.fromRGBO(158, 191, 217, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -35,7 +35,7 @@ class ButtonWithArrow extends StatelessWidget {
                 onPressed: dispatcher,
                 icon: const FaIcon(
                   FontAwesomeIcons.arrowRight,
-                  color: Colors.white,
+                  color: Colors.black,
                   size: 20,
                 ))
           ],
@@ -110,7 +110,7 @@ class ButtonLoading extends StatelessWidget {
         height: 40,
         width: 190,
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(45, 125, 188, 1),
+            color: Color.fromRGBO(158, 191, 217, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -159,15 +159,15 @@ class AuthWideBlueButton extends StatelessWidget {
               height: 50,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
-                color: Color.fromRGBO(45, 125, 188, 1),
+                color: Color.fromRGBO(158, 191, 217, 1),
               ),
               child: Center(
                 child: Text(lable,
                     style: GoogleFonts.montserrat(
                       textStyle: const TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 16,
-                          fontWeight: FontWeight.w500),
+                          fontWeight: FontWeight.w600),
                     )),
               ))),
     );

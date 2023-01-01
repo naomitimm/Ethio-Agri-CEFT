@@ -27,7 +27,7 @@ class LandingScreen extends StatelessWidget {
                 ),
                 ButtonWithArrow(
                   text: "New Account",
-                  color: Colors.white,
+                  color: Colors.black,
                   dispatcher: () {
                     navCubit.toSignupScreen();
                   },

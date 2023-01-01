@@ -14,7 +14,30 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
     on<RemoveFromWishlist>(_handleRemoveFromWishlist);
   }
 
-  _handleLoadWishlist(LoadWishlist event, Emitter emit) {}
-  _handleAddToWishlist(AddToWishlist event, Emitter emit) {}
-  _handleRemoveFromWishlist(RemoveFromWishlist event, Emitter emit) {}
+  _handleLoadWishlist(LoadWishlist event, Emitter emit) async {
+    await Future.delayed(const Duration(seconds: 2));
+    try {
+      emit(WishlistLoadingSuccessful(products: event.products));
+    } on Exception catch (error) {
+      emit(WishlistLoadingFailed(error: error));
+    }
+  }
+
+  _handleAddToWishlist(AddToWishlist event, Emitter emit) {
+    final state = this.state;
+    if (state is WishlistLoadingSuccessful) {
+      emit(WishlistLoadingSuccessful(
+          products: List<Product>.from(state.products)..add(event.product)));
+    }
+  }
+
+  _handleRemoveFromWishlist(RemoveFromWishlist event, Emitter emit) {
+    final state = this.state;
+    if (state is WishlistLoadingSuccessful) {
+      final List<Product> products = state.products.where((product) {
+        return product.productName != event.product.productName;
+      }).toList();
+      emit(WishlistLoadingSuccessful(products: products));
+    }
+  }
 }

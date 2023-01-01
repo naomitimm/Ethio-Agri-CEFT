@@ -26,3 +26,8 @@ class AddedToWhishlist extends WishlistState {
   @override
   List<Object?> get props => [];
 }
+
+class RemovedFromWishlist extends WishlistState {
+  @override
+  List<Object?> get props => [];
+}
