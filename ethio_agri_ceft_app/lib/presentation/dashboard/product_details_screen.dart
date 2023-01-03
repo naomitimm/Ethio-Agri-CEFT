@@ -41,16 +41,13 @@ class ProductDetailsScreen extends StatelessWidget {
                   ),
                   Positioned(
                     child: Container(
-                      height: size.height / 10,
+                      height: size.height / 15,
                       width: double.infinity,
                       decoration: const BoxDecoration(
-                          color: Colors.black,
+                          color: Colors.white,
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(40),
                               topRight: Radius.circular(40))),
-                      child: Column(children: [
-                        Text(product.productName),
-                      ]),
                     ),
                   ),
                   Positioned(
@@ -84,7 +81,40 @@ class ProductDetailsScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [],
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          product.productName,
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 19,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Text(
+                          "\$ ${product.price.toString()}",
+                          style: GoogleFonts.montserrat(
+                            textStyle: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 19,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                    Text(
+                      product.description,
+                      style: GoogleFonts.montserrat(
+                        textStyle: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 19,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),

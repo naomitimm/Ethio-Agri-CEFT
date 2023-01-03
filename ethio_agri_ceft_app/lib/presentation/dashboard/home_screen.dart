@@ -1,3 +1,4 @@
+import 'package:ethio_agri_ceft_app/domain/product/product_type_model.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,11 +25,11 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: Product.productType.length,
+                    itemCount: ProductType.productTypes.length,
                     itemBuilder: ((context, index) {
                       return ProductTypeCard(
-                        name: Product.productType[index].productName,
-                        imageUrl: Product.productType[index].imageUrl,
+                        name: ProductType.productTypes[index].productTypeName,
+                        imageUrl: ProductType.productTypes[index].imageUrl,
                       );
                     })),
               ),
