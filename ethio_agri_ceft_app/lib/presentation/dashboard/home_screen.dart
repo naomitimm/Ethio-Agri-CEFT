@@ -6,6 +6,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final navCubit = context.read<NavigationCubit>();
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
@@ -44,6 +45,10 @@ class HomeScreen extends StatelessWidget {
                       price: Product.products[index].price!,
                       imageUrl: Product.products[index].imageUrl,
                       name: Product.products[index].productName,
+                      dispatcher: () {
+                        navCubit
+                            .toProductDetailsScreen(Product.products[index]);
+                      },
                     );
                   })),
             )

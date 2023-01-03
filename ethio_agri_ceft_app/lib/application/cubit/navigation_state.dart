@@ -29,3 +29,11 @@ class DashboardRoute extends NavigationState {
   @override
   List<Object?> get props => [tabIndex];
 }
+
+class ProductDetailsRoute extends NavigationState {
+  final Product product;
+  ProductDetailsRoute({required this.product});
+
+  @override
+  List<Object?> get props => [product];
+}

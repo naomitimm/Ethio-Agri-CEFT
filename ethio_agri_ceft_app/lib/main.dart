@@ -1,3 +1,4 @@
+import 'package:ethio_agri_ceft_app/presentation/dashboard/product_details_screen.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 void main() {
@@ -47,6 +48,9 @@ class UnnamedPages extends StatelessWidget {
                 const MaterialPage(child: LandingScreen()),
               if (state is DashboardRoute)
                 const MaterialPage(child: DashboardScreen()),
+              if (state is ProductDetailsRoute)
+                MaterialPage(
+                    child: ProductDetailsScreen(product: state.product)),
             ],
             onPopPage: (route, result) => route.didPop(result),
           ),
