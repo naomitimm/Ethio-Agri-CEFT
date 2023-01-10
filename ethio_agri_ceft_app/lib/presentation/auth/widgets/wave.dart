@@ -11,17 +11,10 @@ class LandingPageWave extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            color: const Color.fromRGBO(45, 125, 188, 1),
-            height: size.height / 1.6,
+            color: const Color.fromRGBO(255, 114, 76, 1),
+            height: size.height / 1.5,
             width: double.infinity,
           ),
-          // Positioned(
-          //     top: size.height / 8,
-          //     left: size.width / 3,
-          //     right: size.width / 3,
-          //     child:
-          //         const Image(image: AssetImage("assets/icons/coffee2.png"))
-          //         ),
           Padding(
             padding: EdgeInsets.only(top: size.height / 3.5),
             child: const Align(

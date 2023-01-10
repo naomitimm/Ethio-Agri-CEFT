@@ -19,7 +19,7 @@ class ButtonWithArrow extends StatelessWidget {
         height: 40,
         width: 190,
         decoration: const BoxDecoration(
-            color: Color.fromRGBO(158, 191, 217, 1),
+            color: Color.fromRGBO(42, 44, 65, 1),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -35,7 +35,7 @@ class ButtonWithArrow extends StatelessWidget {
                 onPressed: dispatcher,
                 icon: const FaIcon(
                   FontAwesomeIcons.arrowRight,
-                  color: Colors.black,
+                  color: Color.fromRGBO(255, 114, 76, 1),
                   size: 20,
                 ))
           ],
@@ -159,13 +159,13 @@ class AuthWideBlueButton extends StatelessWidget {
               height: 50,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
-                color: Color.fromRGBO(158, 191, 217, 1),
+                color: Color.fromRGBO(37, 37, 37, 1),
               ),
               child: Center(
                 child: Text(lable,
                     style: GoogleFonts.montserrat(
                       textStyle: const TextStyle(
-                          color: Colors.black,
+                          color: Color.fromRGBO(255, 114, 76, 1),
                           fontSize: 16,
                           fontWeight: FontWeight.w600),
                     )),
@@ -186,11 +186,11 @@ class AuthLoadingButton extends StatelessWidget {
             height: 50,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(15)),
-              color: Color.fromRGBO(45, 125, 188, 1),
+              color: Color.fromRGBO(37, 37, 37, 1),
             ),
             child: const Center(
               child: CircularProgressIndicator(
-                color: Colors.white,
+                color: Color.fromRGBO(255, 114, 76, 1),
               ),
             )));
   }

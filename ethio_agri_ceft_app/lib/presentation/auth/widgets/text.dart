@@ -1,13 +1,5 @@
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
-List colors = const [
-  Color.fromARGB(255, 228, 228, 228),
-  Color.fromRGBO(0, 107, 186, 1),
-  Color.fromRGBO(37, 37, 37, 1),
-  Color.fromRGBO(45, 125, 188, 1),
-  Color.fromRGBO(158, 191, 217, 1),
-];
-
 class AppHeadline extends StatelessWidget {
   final Color color;
   const AppHeadline({

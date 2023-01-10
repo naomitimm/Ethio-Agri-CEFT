@@ -11,6 +11,7 @@ class SignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final navCubit = context.read<NavigationCubit>();
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(244, 244, 248, 1),
       body: Form(
         key: _formKey,
         child: ListView(children: [
@@ -31,7 +32,7 @@ class SignupScreen extends StatelessWidget {
           const Align(
               alignment: Alignment.topCenter,
               child: AppHeadline(
-                color: Color.fromRGBO(45, 125, 188, 1),
+                color: Color.fromRGBO(255, 114, 76, 1),
               )),
           const SizedBox(
             height: 20,
@@ -119,7 +120,7 @@ class SignupScreen extends StatelessWidget {
                           navigator: () {
                             navCubit.toLoginScreen();
                           },
-                          color: const Color.fromRGBO(45, 125, 188, 1),
+                          color: const Color.fromRGBO(255, 114, 76, 1),
                         )),
                   ],
                 ),

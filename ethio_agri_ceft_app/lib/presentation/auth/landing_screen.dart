@@ -8,6 +8,7 @@ class LandingScreen extends StatelessWidget {
     final navCubit = context.read<NavigationCubit>();
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(244, 244, 248, 1),
       body: ListView(
         children: [
           const LandingPageWave(),
@@ -27,7 +28,7 @@ class LandingScreen extends StatelessWidget {
                 ),
                 ButtonWithArrow(
                   text: "New Account",
-                  color: Colors.black,
+                  color: const Color.fromRGBO(255, 114, 76, 1),
                   dispatcher: () {
                     navCubit.toSignupScreen();
                   },
@@ -36,7 +37,7 @@ class LandingScreen extends StatelessWidget {
                   height: 10,
                 ),
                 LinkText(
-                  color: const Color.fromRGBO(45, 125, 188, 1),
+                  color: const Color.fromRGBO(255, 114, 76, 1),
                   text: "Login",
                   navigator: () {
                     navCubit.toLoginScreen();
