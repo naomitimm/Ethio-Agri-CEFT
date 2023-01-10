@@ -17,9 +17,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
         body: myPages[myIndex],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: const Color.fromRGBO(244, 244, 248, 1),
           elevation: 40.0,
           showUnselectedLabels: false,
-          selectedItemColor: const Color.fromRGBO(45, 125, 188, 1),
+          selectedItemColor: const Color.fromRGBO(255, 114, 76, 1),
           selectedLabelStyle: GoogleFonts.montserrat(
             textStyle: const TextStyle(fontWeight: FontWeight.w700),
           ),
@@ -33,14 +34,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
             BottomNavigationBarItem(
                 icon: FaIcon(
                   FontAwesomeIcons.house,
-                  color: Color.fromRGBO(45, 125, 188, 1),
+                  color: Color.fromRGBO(255, 114, 76, 1),
                   size: 25,
                 ),
                 label: "Home"),
             BottomNavigationBarItem(
               icon: FaIcon(
                 FontAwesomeIcons.bagShopping,
-                color: Color.fromRGBO(45, 125, 188, 1),
+                color: Color.fromRGBO(255, 114, 76, 1),
                 size: 25,
               ),
               label: "Wishlist",
@@ -48,7 +49,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             BottomNavigationBarItem(
                 icon: FaIcon(
                   FontAwesomeIcons.userLarge,
-                  color: Color.fromRGBO(45, 125, 188, 1),
+                  color: Color.fromRGBO(255, 114, 76, 1),
                   size: 25,
                 ),
                 label: "Profile"),

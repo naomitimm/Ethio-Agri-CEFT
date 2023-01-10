@@ -24,13 +24,13 @@ export 'package:ethio_agri_ceft_app/presentation/auth/widgets/text.dart';
 export 'package:ethio_agri_ceft_app/presentation/auth/widgets/wave.dart';
 export 'package:ethio_agri_ceft_app/presentation/auth/widgets/auth_buttons.dart';
 export 'package:ethio_agri_ceft_app/presentation/auth/widgets/text_fields.dart';
-export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/profile/alert_widget.dart';
-export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home/product_type_widget.dart';
-export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home/search_widget.dart';
-export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home/text_widgets.dart';
+export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/alert_widget.dart';
+export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/text_widgets.dart';
+export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home_widgets.dart';
 
 // validator
 export 'package:ethio_agri_ceft_app/domain/user/user_validator.dart';
 
 // model
 export 'package:ethio_agri_ceft_app/domain/product/product_model.dart';
+export 'package:ethio_agri_ceft_app/domain/product/product_type_model.dart';

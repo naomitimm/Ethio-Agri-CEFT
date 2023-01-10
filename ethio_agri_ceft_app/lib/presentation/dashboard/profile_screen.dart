@@ -1,5 +1,5 @@
 import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/buttons.dart';
-import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/profile/profile_cards.dart';
+import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/profile_cards.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class ProfileScreen extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/cart/cart_product_widget.dart';
+import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/cart_product_widget.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class WishlistScreen extends StatelessWidget {

@@ -1,20 +1,19 @@
-import 'package:ethio_agri_ceft_app/domain/product/product_type_model.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final navCubit = context.read<NavigationCubit>();
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(244, 244, 248, 1),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: ListView(
           children: [
             const PageHeadline(
-              color: Colors.black,
+              color: Color.fromRGBO(42, 44, 65, 1),
               text: 'Home',
             ),
             const MySearchBar(),
@@ -27,7 +26,7 @@ class HomeScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemCount: ProductType.productTypes.length,
                     itemBuilder: ((context, index) {
-                      return ProductTypeCard(
+                      return TypeCardUnselected(
                         name: ProductType.productTypes[index].productTypeName,
                         imageUrl: ProductType.productTypes[index].imageUrl,
                       );
@@ -39,7 +38,7 @@ class HomeScreen extends StatelessWidget {
               height: size.height / 1.8,
               child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2),
+                      crossAxisCount: 2, childAspectRatio: (3 / 4)),
                   itemCount: Product.products.length,
                   itemBuilder: ((context, index) {
                     return ProductCard(

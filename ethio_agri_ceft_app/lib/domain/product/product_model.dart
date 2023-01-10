@@ -16,46 +16,40 @@ class Product extends Equatable {
   static List<Product> products = [
     const Product(
         productName: 'Tea',
-        imageUrl: 'assets/icons/images.jpeg',
+        imageUrl: 'assets/pics/tea.jpeg',
         price: 204,
         ingridients: "",
         description: ""),
     const Product(
         productName: 'Flowers',
-        imageUrl: 'assets/icons/images.jpeg',
+        imageUrl: 'assets/pics/flowers.jpg',
         price: 204,
         ingridients: "",
         description: ""),
     const Product(
         productName: 'Honey',
-        imageUrl: 'assets/icons/images.jpeg',
+        imageUrl: 'assets/pics/honey.jpg',
         price: 204,
         ingridients: "",
         description: ""),
     const Product(
         productName: 'Coffee',
-        imageUrl: 'assets/icons/images.jpeg',
+        imageUrl: 'assets/pics/coffee.jpg',
         price: 204,
         ingridients: "",
         description: ""),
     const Product(
         productName: 'Crops',
-        imageUrl: 'assets/icons/images.jpeg',
+        imageUrl: 'assets/pics/crop1.jpg',
         price: 204,
         ingridients: "",
         description: ""),
     const Product(
         productName: 'Crops',
-        imageUrl: 'assets/icons/images.jpeg',
+        imageUrl: 'assets/pics/crop2.jpg',
         price: 204,
         ingridients: "",
         description: ""),
-    const Product(
-        productName: 'Crops',
-        imageUrl: 'assets/icons/images.jpeg',
-        price: 204,
-        ingridients: "",
-        description: "")
   ];
 
   @override
