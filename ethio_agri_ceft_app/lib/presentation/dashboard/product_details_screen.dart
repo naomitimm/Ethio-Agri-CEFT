@@ -1,4 +1,4 @@
-import 'package:ethio_agri_ceft_app/application/wishlist/wishlist_bloc.dart';
+import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/details_widgets.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -12,115 +12,95 @@ class ProductDetailsScreen extends StatelessWidget {
     final navCubit = context.read<NavigationCubit>();
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromRGBO(244, 244, 248, 1),
       body: SafeArea(
-        child: ListView(
+          child: ListView(children: [
+        Stack(
           children: [
+            SizedBox(
+              height: size.height / 2,
+            ),
             Container(
-              height: size.height / 1.8,
+              height: size.height / 2.2,
               width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 255, 255, 255),
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40),
-                    bottomRight: Radius.circular(40)),
-                // image: DecorationImage(
-                // image: AssetImage(product.imageUrl), fit: BoxFit.cover)
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(product.imageUrl), fit: BoxFit.cover),
+                borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
               ),
               child: Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
                   Container(
-                    height: size.height / 1.8,
+                    height: size.height / 2.2,
                     width: double.infinity,
                     decoration: BoxDecoration(
                         color: Colors.black.withOpacity(0.4),
                         borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(40),
-                            bottomRight: Radius.circular(40))),
-                  ),
-                  Positioned(
-                    child: Container(
-                      height: size.height / 15,
-                      width: double.infinity,
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(40),
-                              topRight: Radius.circular(40))),
-                    ),
-                  ),
-                  Positioned(
-                    bottom: size.height / 15,
-                    left: size.width / 20,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [],
-                    ),
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20))),
                   ),
                   Positioned(
                     top: size.height / 90,
                     left: size.width / 90,
-                    child: IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        icon: const FaIcon(
-                          FontAwesomeIcons.chevronLeft,
-                          color: Colors.white,
-                          size: 25,
-                        )),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white, width: .3),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10))),
+                      child: IconButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          icon: const FaIcon(
+                            FontAwesomeIcons.chevronLeft,
+                            color: Colors.white,
+                            size: 25,
+                          )),
+                    ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
-              height: size.height / 1,
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          product.productName,
-                          style: GoogleFonts.montserrat(
-                            textStyle: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 19,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                        Text(
-                          "\$ ${product.price.toString()}",
-                          style: GoogleFonts.montserrat(
-                            textStyle: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 19,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        )
-                      ],
-                    ),
-                    Text(
-                      product.description,
-                      style: GoogleFonts.montserrat(
-                        textStyle: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 19,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+            Positioned.fill(
+              child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: StatisticsCard(
+                    title: product.productName,
+                    price: product.price.toString(),
+                    rating: product.rating,
+                  )),
             ),
           ],
         ),
-      ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const DetailsProductHeadline2(title: "Description"),
+              const DetailsSmallText(
+                  text:
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."),
+              Text(
+                product.description,
+                style: GoogleFonts.montserrat(
+                  textStyle: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 19,
+                      fontWeight: FontWeight.w500),
+                ),
+              ),
+              const DetailsProductHeadline2(title: "Ingridients"),
+              const DetailsSmallText(
+                  text: "Lorem ipsum dolor sit amet, lla pariatur."),
+              const Center(child: AddtoWishlistCard())
+            ],
+          ),
+        ),
+      ])),
     );
   }
 }
