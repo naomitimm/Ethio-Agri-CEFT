@@ -44,8 +44,8 @@ class UnnamedPages extends StatelessWidget {
         return MaterialApp(
           home: Navigator(
             pages: [
-              // const MaterialPage(child: LandingScreen()),
-              const MaterialPage(child: DashboardScreen()),
+              const MaterialPage(child: LandingScreen()),
+              // const MaterialPage(child: DashboardScreen()),
               if (state is SignupRoute) MaterialPage(child: SignupScreen()),
               if (state is LoginRoute) MaterialPage(child: LoginScreen()),
               if (state is LandingRoute)
