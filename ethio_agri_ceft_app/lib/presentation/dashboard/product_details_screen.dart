@@ -96,7 +96,28 @@ class ProductDetailsScreen extends StatelessWidget {
               const DetailsProductHeadline2(title: "Ingridients"),
               const DetailsSmallText(
                   text: "Lorem ipsum dolor sit amet, lla pariatur."),
-              const Center(child: AddtoWishlistCard())
+              Center(
+                  child: BlocConsumer<WishlistBloc, WishlistState>(
+                listener: (context, state) {
+                  if (state is WishlistLoadingSuccessful) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                          backgroundColor: const Color.fromRGBO(255, 114, 76, 1)
+                              .withOpacity(0.5),
+                          content: const Text("Added to wishlist")),
+                    );
+                  }
+                },
+                builder: (context, state) {
+                  return AddtoWishlistCard(
+                    dispatcher: () {
+                      context
+                          .read<WishlistBloc>()
+                          .add(AddToWishlist(product: product));
+                    },
+                  );
+                },
+              ))
             ],
           ),
         ),

@@ -3,6 +3,11 @@ part of 'wishlist_bloc.dart';
 @immutable
 abstract class WishlistState extends Equatable {}
 
+class WishlistInitial extends WishlistState {
+  @override
+  List<Object?> get props => [];
+}
+
 class WishlistLoading extends WishlistState {
   @override
   List<Object?> get props => [];

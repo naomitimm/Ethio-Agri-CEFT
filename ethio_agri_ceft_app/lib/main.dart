@@ -1,3 +1,4 @@
+import 'package:ethio_agri_ceft_app/application/wishlist/wishlist_bloc.dart';
 import 'package:ethio_agri_ceft_app/presentation/dashboard/product_details_screen.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
@@ -23,6 +24,9 @@ class ReviewScape extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => LogoutBloc(),
+        ),
+        BlocProvider(
+          create: (context) => WishlistBloc()..add(LoadWishlist()),
         ),
       ],
       child: const UnnamedPages(),

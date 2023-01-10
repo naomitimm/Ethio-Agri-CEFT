@@ -159,39 +159,43 @@ class DetailsSmallText extends StatelessWidget {
 }
 
 class AddtoWishlistCard extends StatelessWidget {
-  const AddtoWishlistCard({super.key});
+  final void Function() dispatcher;
+  const AddtoWishlistCard({super.key, required this.dispatcher});
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-      child: Container(
-        height: 50,
-        width: size.width / 1.5,
-        decoration: const BoxDecoration(
-            color: Color.fromRGBO(42, 44, 65, 1),
-            borderRadius: BorderRadius.all(Radius.circular(20))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const FaIcon(
-              FontAwesomeIcons.bagShopping,
-              color: Color.fromRGBO(255, 114, 76, 1),
-              size: 22,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Text("Add To Wishlist",
-                style: GoogleFonts.montserrat(
-                  textStyle: const TextStyle(
-                      color: Color.fromRGBO(255, 114, 76, 1),
-                      fontSize: 17,
-                      fontWeight: FontWeight.w600),
-                )),
-          ],
+      child: GestureDetector(
+        onTap: dispatcher,
+        child: Container(
+          height: 50,
+          width: size.width / 1.5,
+          decoration: const BoxDecoration(
+              color: Color.fromRGBO(42, 44, 65, 1),
+              borderRadius: BorderRadius.all(Radius.circular(20))),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const FaIcon(
+                FontAwesomeIcons.bagShopping,
+                color: Color.fromRGBO(255, 114, 76, 1),
+                size: 22,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Text("Add To Wishlist",
+                  style: GoogleFonts.montserrat(
+                    textStyle: const TextStyle(
+                        color: Color.fromRGBO(255, 114, 76, 1),
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600),
+                  )),
+            ],
+          ),
         ),
       ),
     );

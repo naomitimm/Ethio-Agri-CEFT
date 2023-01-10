@@ -1,5 +1,4 @@
-import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/buttons.dart';
-import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/profile_cards.dart';
+import 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/profile_widgets.dart';
 import 'package:ethio_agri_ceft_app/presentation/exports.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -12,6 +11,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final navCubit = context.read<NavigationCubit>();
     return Scaffold(
+        backgroundColor: const Color.fromRGBO(244, 244, 248, 1),
         body: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: ListView(children: [
@@ -20,7 +20,7 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   const PageHeadline(
                     text: "Profile",
-                    color: Colors.black,
+                    color: Color.fromRGBO(42, 44, 65, 1),
                   ),
                   Align(
                     alignment: Alignment.topRight,
@@ -100,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  WideBlueButton(
+                  ProfileEditBtn(
                       dispatcher: () {
                         showBottomSheet(
                             context: context,
@@ -123,7 +123,11 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   ProfileInfoCard(
                     icon: IconButton(
-                        onPressed: () {}, icon: const Icon(Icons.date_range)),
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.date_range,
+                          color: Color.fromRGBO(255, 114, 76, 1),
+                        )),
                     text: "Joined in July 2022",
                     dispatcher: () {},
                   ),

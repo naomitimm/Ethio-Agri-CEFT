@@ -10,6 +10,8 @@ export 'package:ethio_agri_ceft_app/application/auth/signup/signup_bloc.dart';
 export 'package:ethio_agri_ceft_app/application/auth/login/login_bloc.dart';
 export 'package:ethio_agri_ceft_app/application/auth/logout/logout_bloc.dart';
 
+export 'package:ethio_agri_ceft_app/application/wishlist/wishlist_bloc.dart';
+
 // screens
 export 'package:ethio_agri_ceft_app/presentation/auth/landing_screen.dart';
 export 'package:ethio_agri_ceft_app/presentation/auth/login_screen.dart';
@@ -27,6 +29,7 @@ export 'package:ethio_agri_ceft_app/presentation/auth/widgets/text_fields.dart';
 export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/alert_widget.dart';
 export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/text_widgets.dart';
 export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/home_widgets.dart';
+export 'package:ethio_agri_ceft_app/presentation/dashboard/widgets/wishlist_widget.dart';
 
 // validator
 export 'package:ethio_agri_ceft_app/domain/user/user_validator.dart';
